@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply — Korea-Uzbekistan Exchange Program</title>
+  <meta name="description" content="Apply to the Korea-Uzbekistan Exchange Program. Open to students from Hanbit High School (Seoul) and Mirzo Ulugbek Lyceum (Samarkand)." />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .apply-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: var(--space-xl);
+      align-items: start;
+    }
+    @media(max-width:900px) {
+      .apply-layout { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Page Header ──────────────────────────────────────── -->
+  <header class="page-header">
+    <div class="container">
+      <span class="label-accent">Join the Program</span>
+      <h1 class="display d1" style="margin-top:0.5rem">Apply <span class="gradient-text">Now</span></h1>
+      <p style="max-width:560px;color:var(--c-muted);margin-top:1rem;font-size:1.05rem;line-height:1.75">Applications for the 2025–26 academic year are open. Deadline: April 30, 2025.</p>
+    </div>
+  </header>
+
+  <!-- ── Main Content ──────────────────────────────────────── -->
+  <section class="section" aria-label="Application">
+    <div class="container">
+      <div class="apply-layout">
+
+        <!-- Left: Eligibility & Info -->
+        <div class="reveal" style="display:flex;flex-direction:column;gap:var(--space-md)">
+          <div class="elig-box">
+            <span class="label-accent" style="display:block;margin-bottom:0.75rem">Eligibility</span>
+            <h2 class="display d3">Who Can Apply?</h2>
+            <ul>
+              <li><span class="icon">✓</span> Students currently enrolled at <strong>Gyeongsan Jeil High School</strong> (Gyeongsan, Korea) or <strong>Chust Specialized School</strong> (Chust, Uzbekistan)</li>
+              <li><span class="icon">✓</span> Grades 9–11 (second year students preferred but not required)</li>
+              <li><span class="icon">✓</span> Basic English proficiency (program communication is in English)</li>
+              <li><span class="icon">✓</span> Parental/guardian consent required for all participants</li>
+              <li><span class="icon">✓</span> Able to commit to the full academic year (Sep 2025 – Jun 2026)</li>
+            </ul>
+          </div>
+
+          <div style="background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius-md);padding:var(--space-md)">
+            <span class="label-accent" style="display:block;margin-bottom:0.75rem">Selection Process</span>
+            <div class="timeline" style="padding-left:1.5rem">
+              <div class="timeline-item">
+                <h4>Submit Application</h4>
+                <p>Fill in the form with a short personal statement and get teacher endorsement.</p>
+              </div>
+              <div class="timeline-item">
+                <h4>Short Interview</h4>
+                <p>A casual 15-minute conversation with program coordinators at your school.</p>
+              </div>
+              <div class="timeline-item">
+                <h4>Results Announced</h4>
+                <p>Up to 20 students selected per school. Results by May 15, 2025.</p>
+              </div>
+              <div class="timeline-item" style="padding-bottom:0">
+                <h4>Orientation</h4>
+                <p>Welcome session and pen pal matching in September 2025.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius-md);padding:var(--space-md)">
+            <span class="label-accent" style="display:block;margin-bottom:0.75rem">Questions?</span>
+            <p style="font-size:0.88rem;color:var(--c-muted);margin-bottom:0.75rem">Reach out to your school's program contact or use the form to ask questions instead of applying.</p>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div style="display:flex;gap:10px;align-items:center;font-size:0.88rem">
+                <span style="color:var(--c-accent-kr)">🇰🇷</span>
+                <span style="color:var(--c-muted)">Hanbit HS:</span>
+                <span>exchange@Gyeongsanjeil.kr</span>
+              </div>
+              <div style="display:flex;gap:10px;align-items:center;font-size:0.88rem">
+                <span style="color:var(--c-accent-uz)">🇺🇿</span>
+                <span style="color:var(--c-muted)">Chust School:</span>
+                <span>exchange@chust-school.uz</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Application Form -->
+        <div class="reveal reveal-delay-1">
+          <div style="background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius-lg);padding:var(--space-lg)">
+            <h2 class="display d2" style="margin-bottom:var(--space-md)">Application Form</h2>
+            <form id="applyForm" novalidate onsubmit="handleSubmit(event)" style="display:flex;flex-direction:column;gap:var(--space-md)">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="firstName">First Name</label>
+                  <input type="text" id="firstName" name="firstName" placeholder="Your first name" required autocomplete="given-name" />
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" id="lastName" name="lastName" placeholder="Your last name" required autocomplete="family-name" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email" />
+              </div>
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="school">School</label>
+                  <select id="school" name="school" required>
+                    <option value="" disabled selected>Select your school</option>
+                    <option value="Gyeongsan">Gyeongsan Jeil High School (Gyeongsan, Korea)</option>
+                    <option value="chust">Chust Specialized School (Chust, Uzbekistan)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="grade">Grade / Year</label>
+                  <select id="grade" name="grade" required>
+                    <option value="" disabled selected>Select your grade</option>
+                    <option value="9">Grade 9</option>
+                    <option value="10">Grade 10</option>
+                    <option value="11">Grade 11</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="english">English Level (self-assessed)</label>
+                <select id="english" name="english" required>
+                  <option value="" disabled selected>Select level</option>
+                  <option value="basic">Basic (I can write simple sentences)</option>
+                  <option value="intermediate">Intermediate (I can hold a conversation)</option>
+                  <option value="advanced">Advanced (I'm comfortable in English)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="statement">Personal Statement</label>
+                <textarea id="statement" name="statement" placeholder="Why do you want to join this program? What do you hope to share with your pen pal? (min. 100 words)" required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="question">Any questions for us? (optional)</label>
+                <input type="text" id="question" name="question" placeholder="Anything you want to know before applying..." />
+              </div>
+
+              <!-- Consent -->
+              <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:0.88rem;color:var(--c-muted)">
+                <input type="checkbox" id="consent" name="consent" required style="margin-top:3px;width:auto;accent-color:var(--c-accent-gold)" />
+                <span>I confirm I am enrolled at one of the two partner schools and have parental/guardian consent to apply. I can commit to the full academic year.</span>
+              </label>
+
+              <!-- Error message -->
+              <div id="formError" style="display:none;color:#e8455e;font-size:0.84rem;background:rgba(200,16,46,0.1);border:1px solid rgba(200,16,46,0.3);border-radius:var(--radius-sm);padding:0.75rem 1rem"></div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="margin-top:0.5rem">Submit Application</button>
+            </form>
+
+            <!-- Success Message (hidden) -->
+            <div id="formSuccess" style="display:none;text-align:center;padding:var(--space-lg) 0">
+              <div style="font-size:3rem;margin-bottom:1rem">🎉</div>
+              <h3 class="display d3">Application Sent!</h3>
+              <p style="color:var(--c-muted);margin-top:0.75rem;font-size:0.9rem">Thank you for applying! Your school's program coordinator will be in touch within 2 weeks.</p>
+              <a href="index.html" class="btn btn-outline" style="margin-top:1.5rem">← Back to Home</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Why join banner ───────────────────────────────────── -->
+  <section class="section--tight">
+    <div class="container">
+      <div class="reveal" style="margin-bottom:var(--space-md);text-align:center">
+        <span class="label-accent">Why Join?</span>
+        <h2 class="display d2" style="margin-top:0.5rem">What You'll Gain</h2>
+      </div>
+      <div class="grid-3 reveal">
+        <div style="background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius-md);padding:var(--space-md);text-align:center">
+          <div style="font-size:2rem;margin-bottom:0.5rem">🌏</div>
+          <h3 class="display d3">A Real Global Friendship</h3>
+          <p style="color:var(--c-muted);font-size:0.88rem;margin-top:0.5rem">Not a pen pal form letter. A real, ongoing relationship with someone from a completely different world.</p>
+        </div>
+        <div style="background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius-md);padding:var(--space-md);text-align:center">
+          <div style="font-size:2rem;margin-bottom:0.5rem">✈️</div>
+          <h3 class="display d3">Travel Experience</h3>
+          <p style="color:var(--c-muted);font-size:0.88rem;margin-top:0.5rem">A week abroad, visiting your pen pal's city, school, and life. One of the best weeks of your high school years.</p>
+        </div>
+        <div style="background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius-md);padding:var(--space-md);text-align:center">
+          <div style="font-size:2rem;margin-bottom:0.5rem">📜</div>
+          <h3 class="display d3">Program Certificate</h3>
+          <p style="color:var(--c-muted);font-size:0.88rem;margin-top:0.5rem">Graduates receive a bilingual certificate recognising their participation — a meaningful addition to any university application.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/nav.js"></script>
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('applyForm');
+      const errorDiv = document.getElementById('formError');
+      errorDiv.style.display = 'none';
+
+      /* Basic validation */
+      const statement = document.getElementById('statement').value.trim();
+      if (statement.split(/\s+/).length < 30) {
+        errorDiv.textContent = 'Please write at least 100 words in your personal statement.';
+        errorDiv.style.display = 'block';
+        return;
+      }
+      if (!document.getElementById('consent').checked) {
+        errorDiv.textContent = 'Please confirm eligibility and parental consent before submitting.';
+        errorDiv.style.display = 'block';
+        return;
+      }
+
+      /* Simulate submission */
+      const btn = form.querySelector('button[type="submit"]');
+      btn.textContent = 'Submitting…';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        form.style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+      }, 1200);
+    }
+  </script>
+</body>
+</html>

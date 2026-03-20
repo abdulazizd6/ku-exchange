@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard — Korea-Uzbekistan Exchange</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .admin-nav { display:flex; gap:1rem; border-bottom:1px solid var(--c-border); margin-bottom:var(--space-lg); }
+    .admin-tab { padding:0.75rem 1.5rem; background:none; border:none; border-bottom:2px solid transparent; font-weight:600; color:var(--c-muted); cursor:pointer; font-size:1rem; }
+    .admin-tab.active { color:var(--c-text); border-bottom-color:var(--c-accent-gold); }
+    .table-card { background:var(--c-surface); border:1px solid var(--c-border); border-radius:var(--radius-lg); overflow:hidden; }
+    table { width:100%; border-collapse:collapse; text-align:left; font-size:0.9rem; }
+    th, td { padding:1rem; border-bottom:1px solid var(--c-border); }
+    th { background:rgba(242,240,235,0.05); color:var(--c-muted); font-weight:600; text-transform:uppercase; letter-spacing:0.05em; font-size:0.8rem; }
+    tr:last-child td { border-bottom:none; }
+    .badge { display:inline-block; padding:4px 8px; border-radius:4px; font-size:0.75rem; font-weight:700; text-transform:uppercase; }
+    .badge-pending { background:#fce8b2; color:#f29900; }
+    .badge-accepted { background:#ceead6; color:#188038; }
+    .badge-rejected { background:#fad2cf; color:#d93025; }
+  </style>
+</head>
+<body style="background:var(--c-background)">
+
+  <header id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/images/logo.jpg" alt="Korea-Uzbekistan Exchange Logo" class="nav-logo-img">
+      </a>
+      <div style="display:flex;align-items:center;gap:1.5rem">
+        <a href="dashboard.html" style="font-size:0.85rem;font-weight:600;color:var(--c-muted);letter-spacing:0.05em;text-transform:uppercase">← Back to Student View</a>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top:var(--nav-h);padding-bottom:var(--space-2xl)">
+    <div class="container" style="max-width:1000px;margin-top:var(--space-xl)">
+      
+      <div id="loading" style="text-align:center;padding:var(--space-2xl) 0;color:var(--c-muted)">
+        Verifying teacher access...
+      </div>
+
+      <div id="admin-content" style="display:none;flex-direction:column">
+        <header style="margin-bottom:var(--space-lg)">
+          <span class="label-accent">Teacher Access Restricted</span>
+          <h1 class="display d2" style="margin-top:0.5rem">Head Teacher Dashboard</h1>
+          <p style="color:var(--c-muted);margin-top:0.25rem">Manage students, applications, and approve site content.</p>
+        </header>
+
+        <div class="admin-nav">
+          <button class="admin-tab active" data-tab="students">Students & Applications</button>
+          <button class="admin-tab" data-tab="stories">Pending Stories</button>
+        </div>
+
+        <!-- ── TAB: Students ──────────────────────────────────── -->
+        <div id="tab-students" class="tab-pane">
+          <div class="table-card">
+            <table>
+              <thead>
+                <tr>
+                  <th>Student Name</th>
+                  <th>School</th>
+                  <th>App Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="student-list">
+                <!-- Injected via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ── TAB: Stories ───────────────────────────────────── -->
+        <div id="tab-stories" class="tab-pane" style="display:none">
+          <div class="table-card">
+            <table>
+              <thead>
+                <tr>
+                  <th>Author</th>
+                  <th>Story Preview</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="story-list">
+                <!-- Injected via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>

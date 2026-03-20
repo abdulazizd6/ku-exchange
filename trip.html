@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Trip — Korea-Uzbekistan Exchange Program</title>
+  <meta name="description" content="See student trips between Korea and Uzbekistan — a week-long cultural immersion that brings pen pals face-to-face." />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .trip-hero {
+      min-height: 75vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+      overflow: hidden;
+      margin-top: var(--nav-h);
+    }
+    .trip-hero-side {
+      position: relative;
+      overflow: hidden;
+    }
+    .trip-hero-side img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 8s ease;
+    }
+    .trip-hero:hover .trip-hero-side img { transform: scale(1.06); }
+    .trip-hero-side-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: var(--space-lg);
+      background: linear-gradient(0deg, rgba(0,0,0,0.75) 0%, transparent 60%);
+    }
+    .trip-hero-divider {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--c-bg);
+      border: 2px solid var(--c-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      color: var(--c-muted);
+    }
+    @media(max-width:700px) {
+      .trip-hero { grid-template-columns: 1fr; min-height: auto; }
+      .trip-hero-side { min-height: 50vw; }
+      .trip-hero-divider { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Hero Split ────────────────────────────────────────── -->
+  <div class="trip-hero" aria-label="Trip hero">
+    <div class="trip-hero-side">
+      <img src="assets/images/trip_korea.png" alt="Uzbek students visiting Seoul, Korea" loading="eager" />
+      <div class="trip-hero-side-overlay">
+        <span class="tag tag-kr" style="width:fit-content;margin-bottom:0.75rem">🇰🇷 Korea 2024</span>
+        <p class="display" style="font-size:clamp(1.5rem,3vw,2.2rem)">Gyeongsan</p>
+        <p style="font-size:0.84rem;color:rgba(255,255,255,0.65);margin-top:4px">Uzbek students visited Korea — 2024</p>
+      </div>
+    </div>
+    <div class="trip-hero-divider">↔</div>
+    <div class="trip-hero-side">
+      <img src="assets/images/trip_uzbekistan.png" alt="Korean students visiting Samarkand, Uzbekistan" loading="eager" />
+      <div class="trip-hero-side-overlay">
+        <span class="tag tag-uz" style="width:fit-content;margin-bottom:0.75rem">🇺🇿 Uzbekistan 2023</span>
+        <p class="display" style="font-size:clamp(1.5rem,3vw,2.2rem)">Chust</p>
+        <p style="font-size:0.84rem;color:rgba(255,255,255,0.65);margin-top:4px">Korean students visited Uzbekistan — 2023</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Intro ─────────────────────────────────────────────── -->
+  <section class="section" aria-labelledby="trip-intro-heading">
+    <div class="container">
+      <div style="max-width:800px;margin:0 auto;text-align:center" class="reveal">
+        <span class="label-accent">The Annual Trip</span>
+        <h1 id="trip-intro-heading" class="display d1" style="margin-top:0.5rem">The Trip</h1>
+        <p style="color:var(--c-muted);margin-top:1.25rem;font-size:1.1rem;line-height:1.85">Once a year, one school travels to the other. Pen pals finally meet face-to-face. Letters become conversations. The distance collapses into a week of shared meals, shared streets, and shared memories that last a lifetime.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 2024: Korea Trip ──────────────────────────────────── -->
+  <section class="section--tight" aria-labelledby="korea-trip-heading">
+    <div class="container">
+      <div class="reveal" style="margin-bottom:var(--space-md);display:flex;align-items:center;gap:1rem;flex-wrap:wrap">
+        <span class="tag tag-kr">🇰🇷 2024 — Korea</span>
+        <h2 id="korea-trip-heading" class="display d2">Uzbek Students<br>Visit Gyeongsan</h2>
+      </div>
+      <div class="photo-grid reveal">
+        <div class="photo-item p-lg">
+          <img src="assets/images/trip_korea.png" alt="Group photo at Gyeongbokgung Palace, Seoul" style="height:360px" loading="lazy" />
+          <div class="photo-caption">📍 Gyeongbokgung Palace — First morning in Seoul</div>
+        </div>
+        <div class="photo-item p-sm">
+          <img src="assets/images/group_activity.png" alt="Cultural activity session in Seoul" style="height:360px" loading="lazy" />
+          <div class="photo-caption">📍 Traditional craft session with host students</div>
+        </div>
+      </div>
+
+      <div class="grid-3 reveal" style="margin-top:var(--space-md)">
+        <div style="background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius-sm);padding:var(--space-md)">
+          <div style="font-size:1.5rem;margin-bottom:0.5rem">🏯</div>
+          <h4 style="font-family:var(--font-display);font-size:1.2rem;text-transform:uppercase;letter-spacing:0.04em">Day 1–2: Arrival & Welcome</h4>
+          <p style="font-size:0.84rem;color:var(--c-muted);margin-top:0.5rem">Arrival in Korea, welcome ceremony at Gyeongsan Jeil High School, tour of the city and surroundings.</p>
+        </div>
+        <div style="background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius-sm);padding:var(--space-md)">
+          <div style="font-size:1.5rem;margin-bottom:0.5rem">🍜</div>
+          <h4 style="font-family:var(--font-display);font-size:1.2rem;text-transform:uppercase;letter-spacing:0.04em">Day 3–4: School Life</h4>
+          <p style="font-size:0.84rem;color:var(--c-muted);margin-top:0.5rem">A full day attending classes alongside pen pals at Gyeongsan Jeil High School, school lunch, and joint activities.</p>
+        </div>
+        <div style="background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius-sm);padding:var(--space-md)">
+          <div style="font-size:1.5rem;margin-bottom:0.5rem">🌸</div>
+          <h4 style="font-family:var(--font-display);font-size:1.2rem;text-transform:uppercase;letter-spacing:0.04em">Day 5–7: Gyeongju &amp; Farewell</h4>
+          <p style="font-size:0.84rem;color:var(--c-muted);margin-top:0.5rem">Historic Silla kingdom sites in Gyeongju, hot springs, final group dinner, farewell ceremony.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── 2023: Uzbekistan Trip ─────────────────────────────── -->
+  <section class="section--tight" aria-labelledby="uz-trip-heading">
+    <div class="container">
+      <div class="reveal" style="margin-bottom:var(--space-md);display:flex;align-items:center;gap:1rem;flex-wrap:wrap">
+        <span class="tag tag-uz">🇺🇿 2023 — Uzbekistan</span>
+        <h2 id="uz-trip-heading" class="display d2">Korean Students<br>Visit Chust</h2>
+      </div>
+      <div class="photo-grid reveal">
+        <div class="photo-item p-sm">
+          <img src="assets/images/letters_exchange.png" alt="Cultural gift exchange in Samarkand" style="height:360px" loading="lazy" />
+          <div class="photo-caption">📍 Gift exchange ceremony at Mirzo Ulugbek Lyceum</div>
+        </div>
+        <div class="photo-item p-lg">
+          <img src="assets/images/trip_uzbekistan.png" alt="Group photo at Registan Square, Samarkand" style="height:360px" loading="lazy" />
+          <div class="photo-caption">📍 Registan Square — The heart of Samarkand</div>
+        </div>
+      </div>
+      <div class="grid-3 reveal" style="margin-top:var(--space-md)">
+        <div style="background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius-sm);padding:var(--space-md)">
+          <div style="font-size:1.5rem;margin-bottom:0.5rem">🕌</div>
+          <h4 style="font-family:var(--font-display);font-size:1.2rem;text-transform:uppercase;letter-spacing:0.04em">Day 1–2: Welcome</h4>
+          <p style="font-size:0.84rem;color:var(--c-muted);margin-top:0.5rem">Arrival, welcome dinner hosted by student families at Chust Specialized School.</p>
+        </div>
+        <div style="background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius-sm);padding:var(--space-md)">
+          <div style="font-size:1.5rem;margin-bottom:0.5rem">📚</div>
+          <h4 style="font-family:var(--font-display);font-size:1.2rem;text-transform:uppercase;letter-spacing:0.04em">Day 3–4: School &amp; Culture</h4>
+          <p style="font-size:0.84rem;color:var(--c-muted);margin-top:0.5rem">Classes at Chust Specialized School, traditional craft workshop, and local site visits.</p>
+        </div>
+        <div style="background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius-sm);padding:var(--space-md)">
+          <div style="font-size:1.5rem;margin-bottom:0.5rem">🌅</div>
+          <h4 style="font-family:var(--font-display);font-size:1.2rem;text-transform:uppercase;letter-spacing:0.04em">Day 5–7: Registan &amp; Beyond</h4>
+          <p style="font-size:0.84rem;color:var(--c-muted);margin-top:0.5rem">Full-day Registan tour, market walk, traditional music performance, farewell ceremony.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 2025 Planning Banner ──────────────────────────────── -->
+  <section class="section--tight">
+    <div class="container">
+      <div class="teaser-block reveal">
+        <div class="teaser-block-accent"></div>
+        <div>
+          <span class="label-accent">Next Trip</span>
+          <h2 class="display d2" style="margin-top:0.5rem">2025 — <span class="gradient-text">Uzbekistan</span></h2>
+          <p style="color:var(--c-muted);margin-top:0.75rem;max-width:480px">Korean students will visit Samarkand again in May 2025. Applications for this year's cohort are open now.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:0.75rem;flex-shrink:0">
+          <div style="background:var(--c-surface2);border:1px solid var(--c-border);border-radius:var(--radius-sm);padding:0.75rem 1.25rem">
+            <div class="label" style="margin-bottom:2px">Departure</div>
+            <strong style="font-size:1rem">May 10, 2025</strong>
+          </div>
+          <div style="background:var(--c-surface2);border:1px solid var(--c-border);border-radius:var(--radius-sm);padding:0.75rem 1.25rem">
+            <div class="label" style="margin-bottom:2px">Return</div>
+            <strong style="font-size:1rem">May 17, 2025</strong>
+          </div>
+          <a href="apply.html" class="btn btn-accent btn-lg">Apply Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>
