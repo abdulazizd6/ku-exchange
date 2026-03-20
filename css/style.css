@@ -496,6 +496,7 @@ footer {
 .form-group input,
 .form-group textarea,
 .form-group select {
+  width: 100%;
   background: var(--c-surface);
   border: 1.5px solid var(--c-border);
   border-radius: var(--radius-sm);
