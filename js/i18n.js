@@ -42,7 +42,7 @@ const translations = {
     "acts.01.tag":   "01 / Letters",
     "acts.01.title": "Pen Pal<br>Exchange",
     "acts.02.tag":   "02 / Cultural Boxes",
-    "acts.02.title": "Culture<br>in a Box",
+    "acts.02.title": "Cultural<br>Box",
     "acts.03.tag":   "03 / Group Activities",
     "acts.03.title": "Together,<br>Remotely",
     "acts.cta.label": "Join the Program",

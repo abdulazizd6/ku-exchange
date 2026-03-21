@@ -18,7 +18,7 @@
         <li><a href="alumni.html" data-page="alumni" data-i18n="nav.alumni">Alumni</a></li>
       </ul>
       <div class="nav-cta" style="display:inline-block">
-        <a href="login.html" class="btn btn-primary" data-i18n="nav.apply">Log In</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdyBOLVM5tfdMQNXqom3GcyMjEW5kfIMpBfBy3iY5gb9ZFwYg/viewform?usp=publish-editor" target="_blank" class="btn btn-primary" data-i18n="nav.apply">Apply Now</a>
       </div>
       <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -32,7 +32,7 @@
     <a href="trip.html" data-page="trip" data-i18n="nav.trip">Trip</a>
     <a href="alumni.html" data-page="alumni" data-i18n="nav.alumni">Alumni</a>
     <div class="nav-cta-mobile" style="text-align:center;margin-top:1rem">
-      <a href="login.html" class="btn btn-primary" data-i18n="nav.apply">Log In</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdyBOLVM5tfdMQNXqom3GcyMjEW5kfIMpBfBy3iY5gb9ZFwYg/viewform?usp=publish-editor" target="_blank" class="btn btn-primary" data-i18n="nav.apply">Apply Now</a>
     </div>
   </div>`;
 
@@ -53,7 +53,7 @@
           <a href="activities.html">Activities</a>
           <a href="trip.html">Trip</a>
           <a href="alumni.html">Alumni</a>
-          <a href="apply.html">Apply</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdyBOLVM5tfdMQNXqom3GcyMjEW5kfIMpBfBy3iY5gb9ZFwYg/viewform?usp=publish-editor" target="_blank">Apply</a>
         </nav>
       </div>
       <div class="footer-bottom">
@@ -118,34 +118,6 @@
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  // --- Auth State UI update ------------------------------
-  function initAuthState() {
-    const ctaBtns = document.querySelectorAll('.nav-cta, .nav-cta-mobile');
-
-    // Try to use the auth module if it exists (only on pages that load it)
-    import('./auth.js').then((authModule) => {
-      authModule.onAuth((user) => {
-        ctaBtns.forEach(btn => {
-          if (user) {
-            btn.innerHTML = `
-              <a href="dashboard.html" class="btn btn-primary" style="display:inline-flex;align-items:center;gap:6px">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                Dashboard
-              </a>
-            `;
-          } else {
-            btn.innerHTML = `<a href="login.html" class="btn btn-primary" data-i18n="nav.apply">Log In</a>`;
-          }
-        });
-      });
-    }).catch(() => {
-      // Fallback if not loaded
-      ctaBtns.forEach(btn => {
-        btn.innerHTML = `<a href="login.html" class="btn btn-primary" data-i18n="nav.apply">Log In</a>`;
-      });
-    });
-  }
-
   // --- Injection Logic ---------------------------------
   function injectLayout() {
     // 1. Inject Navigation
@@ -162,9 +134,6 @@
 
     // Set active link properly
     setActiveLink();
-
-    // Check auth state for CTA button
-    initAuthState();
 
     // Initial lang setup for injected html
     if (typeof updateTranslations === "function") {

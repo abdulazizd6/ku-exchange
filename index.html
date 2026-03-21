@@ -27,7 +27,7 @@
         A high school exchange program connecting students from Korea and Uzbekistan through letters, culture, and travel.
       </p>
       <div class="hero-cta reveal reveal-delay-3">
-        <a href="apply.html" class="btn btn-primary btn-lg" data-i18n="hero.cta.primary">Apply Now</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdyBOLVM5tfdMQNXqom3GcyMjEW5kfIMpBfBy3iY5gb9ZFwYg/viewform?usp=publish-editor" target="_blank" class="btn btn-primary btn-lg" data-i18n="hero.cta.primary">Apply Now</a>
         <a href="about.html" class="btn btn-outline btn-lg" data-i18n="hero.cta.secondary">Learn More</a>
       </div>
     </div>
@@ -35,6 +35,19 @@
     <div style="position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;opacity:0.45;">
       <span style="font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase">Scroll</span>
       <div style="width:1.5px;height:36px;background:linear-gradient(to bottom, rgba(242,240,235,0.6), transparent)"></div>
+    </div>
+  </section>
+
+  <!-- ── Announcements ──────────────────────────────────── -->
+  <section class="section" aria-label="Announcements">
+    <div class="container">
+      <div class="reveal" style="margin-bottom: var(--space-lg)">
+        <span class="label-accent">Latest News</span>
+        <h2 class="display d2" style="margin-top:0.5rem">Announcements</h2>
+      </div>
+      <div id="announcements-container" style="display:flex; flex-direction:column; gap: 1rem;">
+        <p style="color:var(--c-muted);">Loading announcements...</p>
+      </div>
     </div>
   </section>
 
@@ -79,7 +92,7 @@
           <img class="card-img" src="assets/images/cultural_box_real.jpg" alt="Cultural exchange box" loading="lazy" />
           <div class="card-body">
             <span class="label-accent">02 — Cultural Boxes</span>
-            <h3>Culture in a Box</h3>
+            <h3>Cultural Box</h3>
             <p>Packages of snacks, crafts, and everyday objects travel between schools — a taste of each other's life.</p>
             <a href="activities.html" class="btn btn-outline" style="margin-top:1rem;font-size:0.78rem">Read More →</a>
           </div>
@@ -128,27 +141,10 @@
         </div>
         <a href="alumni.html" class="btn btn-outline">All Stories →</a>
       </div>
-      <div class="grid-2">
-        <div class="testimonial-card reveal">
-          <p class="testimonial-quote">This program changed how I see the world. Writing to my Korean pen pal made me realize how much we have in common despite how far apart we live.</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">ZA</div>
-            <div class="testimonial-info">
-              <strong>Zulfiya Akramova</strong>
-              <span>Samarkand, Uzbekistan · Class of 2024</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card reveal reveal-delay-1">
-          <p class="testimonial-quote">Getting a cultural box from Uzbekistan was the most exciting day of my school year. I still have the suzani bookmark on my desk.</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">MJ</div>
-            <div class="testimonial-info">
-              <strong>Min-jun Lee</strong>
-              <span>Seoul, Korea · Class of 2024</span>
-            </div>
-          </div>
-        </div>
+      <div class="reveal" style="background:var(--c-surface); border:1px dashed var(--c-border); border-radius:var(--radius-lg); padding:4rem 2rem; text-align:center; color:var(--c-muted);">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:1rem; opacity:0.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        <h3 style="margin-bottom:0.5rem; color:var(--c-text);">Stories Coming Soon</h3>
+        <p style="max-width:450px; margin:0 auto; font-size:0.95rem; line-height:1.6;">Our very first exchange program is taking place this year! Check back later to read real stories, memories, and experiences from our pioneer students.</p>
       </div>
     </div>
   </section>
@@ -160,11 +156,13 @@
         <span class="label-accent">Ready to Join?</span>
         <h2 class="display d2" style="margin-top:0.5rem">Applications Now<br><span class="gradient-text">Open</span></h2>
         <p style="color:var(--c-muted);margin:1rem auto;max-width:480px">Open to students from our two partner schools only. Applications close April 30, 2026.</p>
-        <a href="apply.html" class="btn btn-primary btn-lg" style="margin-top:0.5rem">Apply Now</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdyBOLVM5tfdMQNXqom3GcyMjEW5kfIMpBfBy3iY5gb9ZFwYg/viewform?usp=publish-editor" target="_blank" class="btn btn-primary btn-lg" style="margin-top:0.5rem">Apply Now</a>
       </div>
     </div>
   </section>
 
+  <script type="module" src="js/announcements.js"></script>
+  <script type="module" src="js/teacher-module.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/nav.js"></script>
 </body>
